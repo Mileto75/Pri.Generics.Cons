@@ -80,4 +80,3 @@ foreach(var television in televisionRepository.GetAll())
 {
     Console.WriteLine(television.ToString());
 }
-
