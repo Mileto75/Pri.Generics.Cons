@@ -68,15 +68,12 @@ televisionRepository.Add(new Television
     ScreenSize = 50
 });
 
-foreach(var number in intRepository.GetAll())
+PrintRepository(televisionRepository);
+static void PrintRepository<T>(IRepository<T> repository)
 {
-    Console.WriteLine(number);
+    foreach(var item in repository.GetAll())
+    {
+        Console.WriteLine(item.ToString());
+    }
 }
-foreach(var stringNumber in stringRepository.GetAll())
-{
-    Console.WriteLine($"{stringNumber}");
-}
-foreach(var television in televisionRepository.GetAll())
-{
-    Console.WriteLine(television.ToString());
-}
+
